@@ -11,3 +11,7 @@ export const addItemToCart = (cartItems, itemToAdd) => {
 
   return [...cartItems, { ...itemToAdd, quantity: 1 }];
 }
+
+export const clearItemFromCart = (cartItems, id) => {
+  return cartItems.filter(item => item.id !== id);
+}
